@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\First\ControllerUnico;
+
+Route::get('/', [ControllerUnico::class, "index"])->name("home");
